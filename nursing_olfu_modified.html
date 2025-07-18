@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Nursing at OLFU</title>
+<style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #003366;
+        }
+        header {
+            background-color: #006633;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #003366;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #006633;
+        }
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        .feedback-form {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<header>
+<h1>Explore Nursing at OLFU</h1>
+<p>Compassion. Care. Commitment.</p>
+</header>
+<nav>
+<a href="#intro">Introduction</a>
+<a href="#why-nursing">Why Nursing?</a>
+<a href="#why-olfu">Why OLFU?</a>
+<a href="#careers">Career Paths</a>
+<a href="#links">Useful Links</a>
+<a href="#feedback">Feedback</a>
+</nav>
+<section id="intro">
+<h2>🌍 Introduction</h2>
+<p>Filipino nurses are known worldwide for their dedication, compassion, and excellence in patient care. Nursing offers a stable and fulfilling career with opportunities both locally and abroad. It is a profession that touches lives and makes a difference every day.</p>
+</section>
+<section id="why-nursing">
+<h2>💉 Why Choose Nursing?</h2>
+<p>Nursing is more than just a job—it's a calling. As a nurse, you become a hero in scrubs, helping people heal and feel better every day. Whether you're working in a hospital, clinic, or community, your care makes a real impact.</p>
+</section>
+<section id="why-olfu">
+<h2>🏫 Why Study at OLFU?</h2>
+<p>Our Lady of Fatima University is recognized as one of the leading institutions for nursing education in the Philippines. With a strong commitment to academic excellence and hands-on clinical training, OLFU has produced thousands of competent and compassionate nurses who serve both locally and internationally.</p>
+</section>
+<section id="careers">
+<h2>🚀 Career Opportunities</h2>
+<ul>
+<li>Hospital Nurse</li>
+<li>Community Health Nurse</li>
+<li>School Nurse</li>
+<li>Clinical Instructor</li>
+<li>International Nurse</li>
+</ul>
+</section>
+<section id="quiz-section" style="background-color:#f0f9f0; padding:20px; margin-top:20px;">
+<h2>🧠 Nursing Trivia Quiz</h2>
+<p id="clock" style="font-weight:bold;"></p>
+<form id="quiz-form">
+<div>
+<p>1. What is the minimum number of years to complete a BS in Nursing in the Philippines?</p>
+<label><input name="q1" type="radio" value="a"/> 3 years</label><br/>
+<label><input name="q1" type="radio" value="b"/> 4 years</label><br/>
+<label><input name="q1" type="radio" value="c"/> 5 years</label>
+</div>
+<div>
+<p>2. Which exam must Filipino nurses pass to become licensed?</p>
+<label><input name="q2" type="radio" value="a"/> NCLEX</label><br/>
+<label><input name="q2" type="radio" value="b"/> IELTS</label><br/>
+<label><input name="q2" type="radio" value="c"/> NLE</label>
+</div>
+<div>
+<p>3. What does OLFU stand for?</p>
+<label><input name="q3" type="radio" value="a"/> Our Lady of Fatima University</label><br/>
+<label><input name="q3" type="radio" value="b"/> Our Lady of Future University</label><br/>
+<label><input name="q3" type="radio" value="c"/> Our Life for Unity</label>
+</div>
+<div>
+<p>4. Which of the following is a core value of nursing?</p>
+<label><input name="q4" type="radio" value="a"/> Competition</label><br/>
+<label><input name="q4" type="radio" value="b"/> Compassion</label><br/>
+<label><input name="q4" type="radio" value="c"/> Calculation</label>
+</div>
+<button onclick="calculateScore()" type="button">Submit Answers</button>
+</form>
+<p id="quiz-result" style="font-weight:bold; margin-top:10px;"></p>
+</section>
+<script>
+function updateClock() {
+  const now = new Date();
+  document.getElementById("clock").textContent = now.toLocaleString();
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+function calculateScore() {
+  const answers = {
+    q1: "b",
+    q2: "c",
+    q3: "a",
+    q4: "b"
+  };
+  let score = 0;
+  for (let q in answers) {
+    const selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (selected && selected.value === answers[q]) {
+      score++;
+    }
+  }
+  document.getElementById("quiz-result").textContent = `You scored ${score} out of 4!`;
+}
+</script>
+<section id="links">
+<h2>🔗 Useful Links</h2>
+<ul>
+<li><a href="https://www.fatima.edu.ph/" target="_blank">OLFU Official Website</a></li>
+<li><a href="https://www.prc.gov.ph/" target="_blank">Philippine Regulation Commission (PRC)</a></li>
+<li><a href="https://www.doh.gov.ph/" target="_blank">Department of Health</a></li>
+<li><a href="https://ched.gov.ph" target="_blank">Commission on Higher Education (CHED)</a></li><li><a href="https://adpcn.org.ph" target="_blank">Association of Deans of Philippine Colleges of Nursing (ADPCN)</a></li><li><a href="https://www.icn.ch" target="_blank">International Council of Nurses (ICN)</a></li><li><a href="https://www.pacu.org.ph" target="_blank">Philippine Association of Colleges and Universities (PACU)</a></li><li><a href="https://www.jobstreet.com.ph/en/job-search/nursing-jobs/" target="_blank">JobStreet Nursing Jobs</a></li><li><a href="https://www.who.int/teams/nursing-and-midwifery" target="_blank">WHO Nursing and Midwifery</a></li></ul>
+</section>
+<section id="feedback">
+<h2>📝 Feedback Form</h2>
+<div class="feedback-form">
+<form>
+<label for="name">Your Name:</label><br/>
+<input id="name" name="name" style="width:100%;" type="text"/><br/><br/>
+<label for="message">Your Message:</label><br/>
+<textarea id="message" name="message" rows="4" style="width:100%;"></textarea><br/><br/>
+<input style="background-color:#006633; color:white; padding:10px 20px; border:none; border-radius:5px;" type="submit" value="Submit"/>
+</form>
+</div>
+</section>
+<footer>Created for a school project by Nevado, Nicca | Exploring Nursing at OLFU</footer>
+</body>
+</html>
